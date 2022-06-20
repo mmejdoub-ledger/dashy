@@ -1,0 +1,96 @@
+appConfig:
+  theme: dashy-docs
+  customCss: >-
+    @media (min-width: 1780px) { .home
+    .item-group-container:not(.item-size-large) { grid-template-columns:
+    repeat(3, 1fr); } } .home .item-group-container.item-size-large
+    .item-group-grid, .home .item-group-container.orientation-vertical
+    .item-group-grid { display: flex !important; }
+  auth:
+    enableGuestAccess: true
+    users:
+      - user: alicia
+        hash: 4D1E58C90B3B94BCAD9848ECCACD6D2A8C9FBC5CA913304BBA5CDEAB36FEEFA3
+        type: admin
+  webSearch:
+    searchEngine: duckduckgo
+    openingMethod: newtab
+  enableErrorReporting: true
+  allowConfigEdit: false
+  enableFontAwesome: true
+  fontAwesomeKey: 2e949c5bf4
+  faviconApi: allesedv
+  workspaceLandingUrl: https://dashy.to
+  enableMultiTasking: false
+  layout: auto
+  iconSize: medium
+  language: fr
+pageInfo:
+  title: Ledger dev
+  description: DevTools
+  footerText: ''
+  logo: https://enterprise.ledger.com/wp-content/uploads/2022/06/ledger_entreprise-white-1-1.png
+sections:
+  - name: Repo & Monitoring
+    icon: fas fa-code
+    displayData:
+      sortBy: default
+      sectionLayout: grid
+      itemCountX: 5
+      cols: 2
+    items:
+      - title: Github
+        description: Main repos
+        icon: favicon
+        url: https://github.com/LedgerHQ
+      - title: Sonar
+        description: Quality and complexity checking
+        icon: favicon
+        url: https://sonarcloud.io/
+  - name: Architecture Tools
+    icon: fas fa-code
+    displayData:
+      sortBy: default
+      sectionLayout: grid
+      itemCountX: 5
+      cols: 2
+    items:
+      - title: Excalidraw
+        description: Excalidraw is a virtual collaborative whiteboard tool 
+        icon: favicon
+        url: https://excalidraw.com/
+      - title: Lucid
+        description: Lucidchart is the intelligent diagramming
+        icon: favicon
+        url: https://lucid.app/
+      - title: Vault Remote
+        description: Create your own vault
+        icon: https://enterprise.ledger.com/wp-content/uploads/2022/06/ledger_entreprise-white-1-1.png
+        url: https://remote.minivault.ledger-sbx.com/
+  - name: Project Management
+    icon: fas fa-analytics
+    items:
+      - title: Jira
+        url: https://ledgerhq.atlassian.net/jira/your-work
+        icon: favicon
+      - title: Confluence
+        url: https://ledgerhq.atlassian.net/wiki/home
+        icon: favicon
+      - title: Miro
+        url: https://miro.com/
+        icon: favicon  
+  - name: UI / UX
+    icon: fas fa-analytics
+    displayData:
+      hideForUsers:
+        - alicia
+      sortBy: most-used
+    items:
+      - title: StoryBook
+        description: Preview B2B
+        url: https://ledgerhq.github.io/ledger-vault-front/?path=/story/vault-introduction--page
+        icon: favicon
+      - title: Figma
+        description: Collaborative interface design tool
+        url: https://www.figma.com/
+        icon: favicon
