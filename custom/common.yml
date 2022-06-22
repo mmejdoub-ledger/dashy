@@ -1,35 +1,9 @@
-appConfig:
-  theme: dashy-docs
-  customCss: >-
-    @media (min-width: 1780px) { .home
-    .item-group-container:not(.item-size-large) { grid-template-columns:
-    repeat(3, 1fr); } } .home .item-group-container.item-size-large
-    .item-group-grid, .home .item-group-container.orientation-vertical
-    .item-group-grid { display: flex !important; }
-  auth:
-    enableGuestAccess: true
-    users:
-      - user: alicia
-        hash: 4D1E58C90B3B94BCAD9848ECCACD6D2A8C9FBC5CA913304BBA5CDEAB36FEEFA3
-        type: admin
-  webSearch:
-    searchEngine: duckduckgo
-    openingMethod: newtab
-  enableErrorReporting: true
-  allowConfigEdit: false
-  enableFontAwesome: true
-  fontAwesomeKey: 2e949c5bf4
-  faviconApi: allesedv
-  workspaceLandingUrl: https://dashy.to
-  enableMultiTasking: false
-  layout: auto
-  iconSize: medium
-  language: fr
 pageInfo:
   title: Ledger Life
   description: All about ledger
   footerText: ''
-  logo: https://enterprise.ledger.com/wp-content/uploads/2022/06/ledger_entreprise-white-1-1.png
+  logo: >-
+    https://enterprise.ledger.com/wp-content/uploads/2022/06/ledger_entreprise-white-1-1.png
 sections:
   - name: Hr tools
     icon: fas fa-code
@@ -43,14 +17,18 @@ sections:
         description: People / Time off
         icon: favicon
         url: https://ledger.bamboohr.com/
+        id: 0_779_bamboohr
       - title: Deskare
         description: Book your office
         icon: https://app.deskare.io/picture/logo/small-logo.svg
         url: https://app.deskare.io/
+        id: 1_779_deskare
       - title: Elevo
         description: Review campaign
-        icon: https://app.elevo.fr/static/media/logo_white_400x160.50935d7eca02940c48b0.png
+        icon: >-
+          https://app.elevo.fr/static/media/logo_white_400x160.50935d7eca02940c48b0.png
         url: https://app.elevo.fr/
+        id: 2_779_elevo
   - name: Communication
     icon: fas fa-analytics
     displayData:
@@ -61,35 +39,73 @@ sections:
       - title: Slack
         url: https://slack.com/
         icon: favicon
+        id: 0_1366_slack
       - title: Google Meet
         description: Meeting (less 400 guests)
         url: https://meet.google.com/
         icon: favicon
+        id: 1_1366_googlemeet
       - title: Zoom
         description: Meeting (More than 400 guests)
         url: https://zoom.us/
         icon: favicon
+        id: 2_1366_zoom
+      - title: Slack channels
+        description: >-
+          All official slack public channels are listed here, grouped by
+          category.
+        icon: >-
+          https://a.slack-edge.com/80588/marketing/img/icons/icon_slack_hash_colored.png
+        url: >-
+          https://ledgerhq.atlassian.net/wiki/spaces/VAUL/pages/3705897029/Slack+Channels
+        target: newtab
+        id: 3_1366_slackchannels
   - name: Classroom
     icon: fas fa-sparkles
     items:
       - title: Ledger Vault 101
         icon: favicon
         url: https://classroom.google.com/c/NTA1ODQyNzEwNDcy
+        id: 0_947_ledgervault
       - title: Cryptography 101
         url: https://classroom.google.com/c/NTA1ODQyNzEwMjQ4
         icon: favicon
+        id: 1_947_cryptography
       - title: Blockchain 101
         icon: favicon
         url: https://classroom.google.com/c/NTA1ODQyNzEwNzEx
+        id: 2_947_blockchain
   - name: Socials & Review Sites
     icon: fas fa-sparkles
     items:
       - title: Twitter
         icon: favicon
         url: https://twitter.com/ledger_business
+        id: 0_1998_twitter
       - title: Glassdoor
-        url: https://www.glassdoor.fr/Pr%C3%A9sentation/Travailler-chez-Ledger-EI_IE1674523.16,22.htm
+        url: >-
+          https://www.glassdoor.fr/Pr%C3%A9sentation/Travailler-chez-Ledger-EI_IE1674523.16,22.htm
         icon: favicon
+        id: 1_1998_glassdoor
       - title: Welcome to the jungle
         icon: favicon
         url: https://www.welcometothejungle.com/fr/companies/ledger
+        id: 2_1998_welcometothejungle
+  - name: CSE
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: false
+    items:
+      - title: Leeto
+        icon: favicon
+        url: https://app.leeto.co/
+        id: 0_219_leeto
+      - title: Documentation
+        icon: >-
+          https://thumbs.dreamstime.com/b/documents-icon-trendy-documents-logo-concept-white-backgroun-documents-icon-trendy-documents-logo-concept-white-background-131173398.jpg
+        url: >-
+          https://ledgerhq.atlassian.net/wiki/spaces/INTRANET/pages/1546813834/CSE
+        id: 1_219_documentation
