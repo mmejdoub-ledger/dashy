@@ -29,6 +29,11 @@ sections:
           https://app.elevo.fr/static/media/logo_white_400x160.50935d7eca02940c48b0.png
         url: https://app.elevo.fr/
         id: 2_779_elevo
+      - title: GENERATION
+        description: Health Insurance
+        icon: 'simple-icon '
+        url: https://assure.generation.fr/view/accueilassure.aspx
+        id: 3_779_generation
   - name: Communication
     icon: fas fa-analytics
     displayData:
