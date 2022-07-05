@@ -157,12 +157,3 @@ sections:
         url: >-
           https://accounts.google.com/o/saml2/initsso?idpid=C030x4pai&spid=819823003122&forceauthn=false
         id: 1_1057_launchdarkly
-pages:
-  - name: Dev Tools
-    path: dev.yml
-  - name: Ledger Life
-    path: common.yml
-  - name: Crypto Dashboard
-    path: crypto.yml
-  - name: test
-    path: test.yml

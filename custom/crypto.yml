@@ -14,14 +14,6 @@ appConfig:
     hideSettings: true
     hideSplashScreen: true
 
-pages:
-- name: Dev Tools
-  path: 'dev.yml'
-- name: HR Tools
-  path: 'hr.yml'
-- name: Crypto
-  path: 'crypto.yml'
-
 sections:
 - name: Token Prices
   icon: fab fa-btc

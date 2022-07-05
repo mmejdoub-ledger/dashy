@@ -1,0 +1,25 @@
+annotations:
+  artifacthub.io/changes: |
+    - kind: fixed
+      description: README.md file
+    - kind: fixed
+      description: fixed capitalization of 'entryPoints' for ingress route
+  artifacthub.io/prerelease: "true"
+apiVersion: v2
+appVersion: latest
+dependencies:
+- name: common
+  repository: https://library-charts.k8s-at-home.com
+  version: ~4.4.0
+icon: https://dashy.to/img/dashy.png
+keywords:
+- dashy
+kubeVersion: '>1.16.0'
+maintainers:
+- email: krzwiatrzyk@protonmail.com
+  name: Krzysztof Wiatrzyk
+name: dashy
+sources:
+- https://dashy.to
+- https://github.com/Lissy93/dashy
+version: 0.0.3
