@@ -130,16 +130,32 @@ persistence:
     # setting to '-' creates the volume but disables the volumeMount.
     mountPath:  /app/public/pages/
 
+shared:
+  enabled: true
+  type: 
+  mountPath: /shared
+
+  # -- Set the medium to "Memory" to mount a tmpfs (RAM-backed filesystem) instead
+  # of the storage medium that backs the node.
+  medium:  # Memory
+
+  # -- If the `SizeMemoryBackedVolumes` feature gate is enabled, you can
+  # specify a size for memory backed volumes.
+  sizeLimit:  # 1Gi
 
 # -- Set the resource requests / limits for the main container.
 resources: {}
 
 ### Custom values, not from Common LibraryChart
+### Custom values, not from Common LibraryChart
 ingressRoute:
   main:
     enabled: true
+    annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+    hostRepo: dashy.infra.ldg-sbx.net
     hosts:
-    - host: dashy.localdev.me
+    - host: dashy.infra.ldg-sbx.net
       paths:
       - path: /
         pathType: prefix
