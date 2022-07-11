@@ -102,5 +102,5 @@ spec:
 
 {{/* Return the appropriate apiVersion for IngressRoute objects */}}
 {{- define "custom.capabilities.ingressRoute.apiVersion" -}}
-  {{- print "traefik.containo.us/v1alpha1" -}}
+  {{- print "networking.k8s.io/v1" -}}
 {{- end -}}
