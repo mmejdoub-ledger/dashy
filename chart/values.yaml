@@ -151,6 +151,10 @@ resources: {}
 ### Custom values, not from Common LibraryChart
 ingress:
   main:
+    tls:
+    - hosts:
+        - dashy.infra.ldg-sbx.net
+      secretName: dashy.infra.ldg-sbx.net-tls
     ingressClassName: nginx
     enabled: true
     annotations:
