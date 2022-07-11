@@ -148,7 +148,7 @@ resources: {}
 
 ### Custom values, not from Common LibraryChart
 ### Custom values, not from Common LibraryChart
-ingressRoute:
+ingress:
   main:
     enabled: true
     annotations:
