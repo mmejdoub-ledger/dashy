@@ -151,6 +151,7 @@ resources: {}
 ### Custom values, not from Common LibraryChart
 ingress:
   main:
+    ingressClassName: nginx
     enabled: true
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt-prod
@@ -158,8 +159,5 @@ ingress:
     hosts:
     - host: dashy.infra.ldg-sbx.net
       paths:
-      - path: /
-        pathType: prefix
-        service:
-          name: 
-          port: 
+      - path: "/"
+        pathType: Prefix
