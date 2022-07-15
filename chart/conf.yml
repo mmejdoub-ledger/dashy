@@ -1,8 +1,13 @@
+---
+# Page meta info, like heading, footer text and nav links
 pageInfo:
   title: Crypto Dash
   description: Home page
   logo: >-
     https://enterprise.ledger.com/wp-content/uploads/2022/06/ledger_entreprise-white-1-1.png
+appConfig:
+  routingMode: hash
+  disableConfiguration: true
 pages:
   - name: Dev Tools
     path: pages/dev.yml
