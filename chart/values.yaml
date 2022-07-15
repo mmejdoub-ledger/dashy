@@ -119,7 +119,7 @@ persistence:
     # -- Where to mount the volume in the main container.
     # Defaults to `/<name_of_the_volume>`,
     # setting to '-' creates the volume but disables the volumeMount.
-    mountPath:  /tmp/conf.yml
+    mountPath:  /app/public/conf.yml
 
     # -- Used in conjunction with `existingClaim`. Specifies a sub-path inside the referenced volume instead of its root
     subPath:  conf.yml
