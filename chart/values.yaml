@@ -11,6 +11,16 @@ image:
   # -- image pull policy
   pullPolicy: Always
 
+initContainers:
+  add-pages:
+    image: busybox
+    command: ["sh", "-c", "cp --no-clobber /tmp/conf.yml /app/public/conf.yml"]
+    volumeMounts:
+    - name: config
+      mountPath: /config
+    securityContext:
+      runAsUser: 0
+
 # -- Specifies whether a service account token should be automatically mounted.
 automountServiceAccountToken: false
 
@@ -89,7 +99,6 @@ service:
       http:
         # -- The port number
         port: 80
-
 # -- Configure persistence for the chart here.
 # Additional items can be added by adding a dictionary key similar to the 'config' key.
 # [[ref]](http://docs.k8s-at-home.com/our-helm-charts/common-library-storage)
@@ -108,7 +117,7 @@ persistence:
     # -- Where to mount the volume in the main container.
     # Defaults to `/<name_of_the_volume>`,
     # setting to '-' creates the volume but disables the volumeMount.
-    mountPath:  /app/public/conf.yml
+    mountPath:  /tmp/conf.yml
 
     # -- Used in conjunction with `existingClaim`. Specifies a sub-path inside the referenced volume instead of its root
     subPath:  conf.yml
@@ -129,20 +138,7 @@ persistence:
     # -- Where to mount the volume in the main container.
     # Defaults to `/<name_of_the_volume>`,
     # setting to '-' creates the volume but disables the volumeMount.
-    mountPath:  /app/public/pages/
-
-shared:
-  enabled: true
-  type: 
-  mountPath: /shared
-
-  # -- Set the medium to "Memory" to mount a tmpfs (RAM-backed filesystem) instead
-  # of the storage medium that backs the node.
-  medium:  # Memory
-
-  # -- If the `SizeMemoryBackedVolumes` feature gate is enabled, you can
-  # specify a size for memory backed volumes.
-  sizeLimit:  # 1Gi
+    mountPath:  /app/public/
 
 # -- Set the resource requests / limits for the main container.
 resources: {}
