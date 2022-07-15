@@ -14,10 +14,12 @@ image:
 initContainers:
   add-pages:
     image: busybox
-    command: ["sh", "-c", "cp --no-clobber /config/conf.yml /app/public/conf.yml"]
+    command: ["sh", "-c", "cp --no-clobber /config/conf.yml /data/conf.yml"]
     volumeMounts:
     - name: config
       mountPath: /config
+    - name: data
+      mountPath: /data
     securityContext:
       runAsUser: 0
 
