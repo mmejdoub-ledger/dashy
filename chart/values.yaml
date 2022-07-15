@@ -140,7 +140,7 @@ persistence:
     # -- Where to mount the volume in the main container.
     # Defaults to `/<name_of_the_volume>`,
     # setting to '-' creates the volume but disables the volumeMount.
-    subPath:  /app/public/pages/conf.yml
+    mountPath:  /app/public/pages/
 
 # -- Set the resource requests / limits for the main container.
 resources: {}
